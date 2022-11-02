@@ -1,0 +1,569 @@
+.reset {
+  position: static;
+  left: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  background: none;
+}
+.bbox,
+.bbox * {
+  box-sizing: border-box;
+}
+.interactive {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.interactive:active {
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+  transform: translateY(2px);
+}
+.abs100x100 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.centering {
+  display: table !important;
+  width: 100%;
+  height: 100%;
+}
+.centering > *:first-child {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.centering > *:first-child > *:first-child {
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .hidden-on-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+}
+.rur:not(:empty):after {
+  content: ' \20BD ';
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#site-wrap,
+#site-wrap * {
+  box-sizing: border-box;
+}
+#site-wrap section + section {
+  margin-top: 3%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section + section {
+    margin-top: 10%;
+  }
+}
+#site-wrap section > .contenu {
+  max-width: 1370px;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1.1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 1440px) {
+  #site-wrap section > .contenu {
+    max-width: 1130px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #site-wrap section > .contenu {
+    font-size: 15.84px;
+  }
+}
+#site-wrap section > .contenu > * {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section > .contenu {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 576px) {
+  #site-wrap section > .contenu {
+    font-size: 1.3em;
+  }
+}
+#site-wrap section > .contenu h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 3em;
+  max-width: 20em;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section > .contenu h2 {
+    font-size: 2.6em;
+    padding: 0 0.5em;
+  }
+}
+@media screen and (max-width: 576px) {
+  #site-wrap section > .contenu h2 {
+    font-size: 2em;
+  }
+}
+#site-wrap section > .contenu h3 {
+  text-align: center;
+  font-size: 2em;
+}
+#site-wrap section > .contenu ul li:before,
+#site-wrap section > .contenu ul li:after {
+  display: none;
+}
+#site-wrap section > .contenu .buttonlike {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  font-size: inherit;
+  height: 2.6em;
+  padding: 0 2em;
+  border: 0;
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+#site-wrap section > .contenu .buttonlike:active {
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+  transform: translateY(2px);
+}
+#site-wrap section > .contenu .buttonlike.transparent {
+  color: inherit;
+  border: 1px solid currentColor;
+}
+#site-wrap section > .contenu .buttonlike.yellow {
+  color: white;
+  background-color: #F0AB00;
+}
+#site-wrap section > .contenu .buttonlike.blue {
+  color: white;
+  background-color: #0093D0;
+}
+#site-wrap section > .contenu .buttonlike.deepblue {
+  color: white;
+  background-color: #0F2855;
+}
+#site-wrap section > .contenu .buttonlike.red {
+  color: white;
+  background-color: #D7232A;
+}
+body .contentLayout-BaseContainer {
+  max-width: 100%;
+  overflow: hidden;
+}
+body .contentLayout-BaseContainer .notcritical {
+  padding: 0!important;
+}
+body .contentLayout-BaseContainer .notcritical > .container {
+  margin: 0!important;
+  padding: 0!important;
+  max-width: none!important;
+}
+body .contentLayout-BaseContainer .notcritical > .container .widgetcontainer {
+  margin-bottom: 0;
+}
+body .contentLayout-BaseContainer .notcritical > .container > .row:not(:nth-child(2)) {
+  display: none;
+}
+body > div.contentLayout-BaseContainer > div.notcritical > div > div:nth-child(2) > div.col-sm-12.order-1.col-md-9.rightcol > h1 {
+  display: none;
+}
+#site-wrap section.more-about {
+  margin-top: 3%;
+}
+#site-wrap section.more-about > .contenu p {
+  max-width: 60em;
+  margin: 0 auto;
+  font-size: 1.2em;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.more-about > .contenu p {
+    padding: 0 2em;
+  }
+}
+#site-wrap section.more-about > .contenu .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+#site-wrap section.proud-of-beaches > .contenu {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  border-radius: 2em;
+  overflow: hidden;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.proud-of-beaches > .contenu {
+    flex-direction: column;
+  }
+}
+#site-wrap section.proud-of-beaches > .contenu .visual {
+  flex-basis: calc(50% + 1em);
+  position: relative;
+  background: url("../iii/visual-beach-desktop.jpg") center no-repeat;
+  background-size: cover;
+}
+#site-wrap section.proud-of-beaches > .contenu .visual:before {
+  content: '';
+  display: block;
+  padding-top: 67.5%;
+}
+#site-wrap section.proud-of-beaches > .contenu .visual > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.proud-of-beaches > .contenu .visual {
+    width: 100%;
+  }
+}
+#site-wrap section.proud-of-beaches > .contenu .info {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 0 4em;
+}
+#site-wrap section.proud-of-beaches > .contenu .info > * {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.proud-of-beaches > .contenu .info {
+    align-items: center;
+    text-align: center;
+    padding: 3em;
+  }
+}
+#site-wrap section.proud-of-beaches > .contenu .info h3 {
+  text-align: inherit;
+  font-size: 1.8em;
+}
+#site-wrap section.proud-of-beaches > .contenu .info p {
+  font-weight: normal;
+  margin: 1em 0 0;
+}
+#site-wrap section.what2see-and-what2do > .contenu h2 {
+  max-width: none;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block {
+  width: 100%;
+  display: flex;
+  margin-top: 3%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block {
+    flex-direction: column!important;
+    align-items: center;
+    text-align: center;
+  }
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .visual {
+  position: relative;
+  background-size: cover;
+  flex-basis: calc(50% + 1em);
+  border-radius: 2em;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .visual:before {
+  content: '';
+  display: block;
+  padding-top: 67.64705882%;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .visual > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .visual {
+    width: 100%;
+  }
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .info {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 4em;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .info > * {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .info {
+    align-items: center;
+    text-align: center;
+    padding: 2em!important;
+  }
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .info > *:nth-child(n+2) {
+  margin-top: 5%;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .info h3 {
+  text-align: inherit;
+  font-size: 2.2em;
+  margin: 0;
+}
+#site-wrap section.what2see-and-what2do > .contenu .alternate-layout .info-block .info p {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+body .subpage-search-bg > .background {
+  position: static;
+  left: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  background: none;
+  position: relative;
+}
+body .subpage-search-bg > .background:before {
+  content: unset;
+}
+body .subpage-search-bg > .background .video-box {
+  position: relative;
+  width: 100%;
+}
+body .subpage-search-bg > .background .video-box:before {
+  content: '';
+  display: block;
+  padding-top: 34.72222222%;
+}
+body .subpage-search-bg > .background .video-box > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  body .subpage-search-bg > .background .video-box {
+    position: relative;
+  }
+  body .subpage-search-bg > .background .video-box:before {
+    content: '';
+    display: block;
+    padding-top: 142.22222222%;
+  }
+  body .subpage-search-bg > .background .video-box > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+body .subpage-search-bg > .background .video-box .backdrop {
+  background: url("../iii/intro-backdrop-desktop.jpg") center no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  body .subpage-search-bg > .background .video-box .backdrop {
+    background-image: url(../iii/intro-backdrop-mobile.jpg);
+  }
+}
+body .subpage-search-bg > .background .video-box .vimeo-wrap {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+body .subpage-search-bg > .background .video-box .vimeo-wrap.playback {
+  opacity: 1;
+}
+body .subpage-search-bg > .background .video-box .vimeo-wrap iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+body .subpage-search-bg > .background .video-box video {
+  object-fit: cover;
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-682px);
+  height: 100%;
+  padding: 6% 0 0;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: normal;
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg > * {
+  max-width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  body .subpage-search-bg > .background .video-box .info-overlay .msg {
+    font-size: 21.6px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  body .subpage-search-bg > .background .video-box .info-overlay .msg {
+    transform: translateX(-564px);
+    font-size: 1.2vw;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body .subpage-search-bg > .background .video-box .info-overlay .msg {
+    padding-top: 10%;
+    transform: none;
+    left: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .subpage-search-bg > .background .video-box .info-overlay .msg {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 4vw;
+    padding: 15% 5%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    color: #033870;
+  }
+  body .subpage-search-bg > .background .video-box .info-overlay .msg p {
+    padding: 0 10%;
+  }
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg > *:nth-child(n+2) {
+  margin-top: 10%;
+}
+@media screen and (max-width: 768px) {
+  body .subpage-search-bg > .background .video-box .info-overlay .msg > *:nth-child(n+2) {
+    margin-top: 8%;
+  }
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg h2,
+body .subpage-search-bg > .background .video-box .info-overlay .msg h3,
+body .subpage-search-bg > .background .video-box .info-overlay .msg h4 {
+  color: inherit;
+  margin: 0;
+  line-height: 1.1;
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg h2 {
+  font-size: 2.8em;
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg .logo-air-arabia {
+  position: relative;
+  width: 10em;
+  max-width: 132px;
+  background: url("../iii/logo-air-arabia.png") center no-repeat;
+  background-size: contain;
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg .logo-air-arabia:before {
+  content: '';
+  display: block;
+  padding-top: 17.21311475%;
+}
+body .subpage-search-bg > .background .video-box .info-overlay .msg .logo-air-arabia > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+body .subpage-search-bg .searchtabsmain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+body .subpage-search-bg .bcrumb {
+  display: none!important;
+}
+.widgetcontainer:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 30px;
+}
+.widgetcontainer:nth-of-type(2) > * {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .widgetcontainer:nth-of-type(2) {
+    padding: 5% 30px;
+  }
+}
+.widgetcontainer:nth-of-type(2) #hotels-set {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+#hotels-set {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+[data-module="destinationDetail"] h1 {
+  display: none;
+}

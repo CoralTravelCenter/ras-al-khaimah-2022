@@ -1,0 +1,281 @@
+@import "../../common/css/common";
+
+#site-wrap {
+	section {
+		> .contenu {
+
+		}
+
+		&.intro {
+
+		}
+
+		&.more-about {
+			margin-top: 3%;
+			>.contenu {
+				p {
+					max-width: 60em;
+					margin: 0 auto;
+					font-size: 1.2em;
+					text-align: center;
+					@media screen and (max-width: @mobile-breakpoint) {
+						padding: 0 2em;
+					}
+				}
+				.actions {
+					.flex-center;
+					margin-top: 2em;
+				}
+			}
+		}
+
+		&.proud-of-beaches {
+			>.contenu {
+				display: flex;
+				flex-direction: row-reverse;
+				background-color: white;
+				border-radius: 2em;
+				overflow: hidden;
+				padding: 0;
+				@media screen and (max-width: @mobile-breakpoint) {
+				    flex-direction: column;
+				}
+				.visual {
+					flex-basis: calc(~"50% + 1em");
+					.proportional(800/540);
+					background: url("../iii/visual-beach-desktop.jpg") center no-repeat;
+					background-size: cover;
+					@media screen and (max-width: @mobile-breakpoint) {
+						width: 100%;
+					}
+				}
+				.info {
+					flex: 1 1;
+					.flex-column;
+					justify-content: center;
+					text-align: left;
+					padding: 0 4em;
+					@media screen and (max-width: @mobile-breakpoint) {
+						align-items: center;
+						text-align: center;
+						padding: 3em;
+					}
+					h3 {
+						text-align: inherit;
+						font-size: 1.8em;
+					}
+					p {
+						font-weight: normal;
+						margin: 1em 0 0;
+					}
+				}
+			}
+		}
+
+		&.what2see-and-what2do {
+			>.contenu {
+				h2 {
+					max-width: none;
+				}
+				.alternate-layout {
+					.info-block {
+						width: 100%;
+						display: flex;
+						margin-top: 3%;
+						@media screen and (max-width: @mobile-breakpoint) {
+						    flex-direction: column!important;
+							align-items: center;
+							text-align: center;
+						}
+						&:nth-child(n+2) {
+						}
+						&:nth-child(even) {
+							flex-direction: row-reverse;
+							.info {
+								//padding-right: 4em;
+							}
+						}
+						.visual {
+							.proportional(680/460);
+							background-size: cover;
+							flex-basis: calc(~"50% + 1em");
+							border-radius: 2em;
+							@media screen and (max-width: @mobile-breakpoint) {
+								width: 100%;
+							}
+						}
+						.info {
+							flex: 1 1;
+							.flex-column;
+							justify-content: center;
+							align-items: flex-start;
+							text-align: left;
+							padding: 0 4em;
+							@media screen and (max-width: @mobile-breakpoint) {
+								align-items: center;
+								text-align: center;
+								padding: 2em!important;
+							}
+							>*:nth-child(n+2) {
+								margin-top: 5%;
+							}
+							h3 {
+								text-align: inherit;
+								font-size: 2.2em;
+								margin: 0;
+							}
+							p {
+								margin-bottom: 0;
+								font-weight: normal;
+							}
+							.actions {
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+body .subpage-search-bg {
+	> .background {
+		.reset;
+		position: relative;
+		&:before {
+			content: unset;
+		}
+		.video-box {
+			.proportional(1728/600);
+			width: 100%;
+			@media screen and (max-width: @mobile-breakpoint) {
+				.proportional(720/1024);
+			}
+
+			.backdrop {
+				background: url("../iii/intro-backdrop-desktop.jpg") center no-repeat;
+				background-size: cover;
+				@media screen and (max-width: @mobile-breakpoint) {
+					background-image: url(../iii/intro-backdrop-mobile.jpg);
+				}
+			}
+
+			.vimeo-wrap {
+				opacity: 0;
+				.transit(opacity, 1s);
+				&.playback {
+					opacity: 1;
+				}
+				iframe {
+					.abs100x100;
+				}
+			}
+
+			video {
+				object-fit: cover;
+			}
+
+			.info-overlay {
+				.msg {
+					.flex-column;
+					justify-content: center;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-682px);
+					height: 100%;
+					padding: 6% 0 0;
+					color: white;
+					.fluid-fontsize(1.5vw);
+					font-weight: normal;
+					@media screen and (max-width: 1439px) {
+						transform: translateX(-564px);
+						font-size: 1.2vw;
+					}
+					@media screen and (max-width: 1199px) {
+						padding-top: 10%;
+						transform: none;
+						left: 5%;
+					}
+					@media screen and (max-width: @mobile-breakpoint) {
+						width: 100%;
+						text-align: center;
+						left: 0;
+						font-size: 4vw;
+						padding: 15% 5%;
+						height: 100%;
+						justify-content: flex-start;
+						align-items: center;
+						color: #033870;
+						p {
+							padding: 0 10%;
+						}
+					}
+					>*:nth-child(n+2) {
+						margin-top: 10%;
+						@media screen and (max-width: @mobile-breakpoint) {
+							margin-top: 8%;
+						}
+					}
+					h2, h3, h4 {
+						color: inherit;
+						margin: 0;
+						line-height: 1.1;
+					}
+					h2 {
+						font-size: 2.8em;
+					}
+					.logo-air-arabia {
+						.proportional(244/42);
+						width: 10em;
+						max-width: 132px;
+						background: url("../iii/logo-air-arabia.png") center no-repeat;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+	.searchtabsmain {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	.bcrumb {
+		display: none!important;
+	}
+}
+
+.widgetcontainer:nth-of-type(2) {
+	//background-color: #84B524;
+	.flex-column;
+	align-items: center;
+	padding: 3% 30px;
+	@media screen and (max-width: @mobile-breakpoint) {
+		padding: 5% 30px;
+	}
+	//&:before {
+	//	content: 'Отели с концепцией Sun Family Club';
+	//	font-size: 3em;
+	//	margin-bottom: 1em;
+	//	color: white;
+	//	text-align: center;
+	//}
+	#hotels-set {
+		width: 100%;
+		max-width: 1280px;
+		margin: auto;
+	}
+}
+
+#hotels-set {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+[data-module="destinationDetail"] h1 {
+	display: none;
+}
