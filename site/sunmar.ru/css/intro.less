@@ -1,0 +1,134 @@
+@import "../../common/css/common";
+
+#site-wrap {
+	section {
+		> .contenu {
+
+		}
+
+		&.intro {
+			.proportional(1370/520);
+			max-width: 1370px;
+			margin: auto;
+			background: url("../iii/intro-desktop.jpg") center no-repeat;
+			background-size: cover;
+			@media screen and (max-width: @mobile-breakpoint) {
+				.proportional(720/980);
+				background-image: url(../iii/intro-mobile.jpg);
+			}
+		}
+
+		&.more-about {
+			//margin-top: 3%;
+			>.contenu {
+				p {
+					max-width: 60em;
+					margin: 0 auto;
+					font-size: 1.2em;
+					text-align: center;
+					@media screen and (max-width: @mobile-breakpoint) {
+						padding: 0 2em;
+					}
+				}
+			}
+		}
+
+		&.beaches {
+			background-color: white;
+			padding: 2em 0;
+			@media screen and (max-width: @mobile-breakpoint) {
+				padding-top: 0;
+			}
+			>.contenu {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				@media screen and (max-width: @mobile-breakpoint) {
+				    flex-direction: column;
+					text-align: center;
+					padding: 0;
+				}
+				.visual {
+					.proportional(800/540);
+					background: url("../iii/beach-visual-desktop.jpg") center no-repeat;
+					background-size: cover;
+					flex-basis: calc(~"50% + 1em");
+					@media screen and (max-width: @mobile-breakpoint) {
+					    flex-basis: auto;
+						width: 100%;
+					}
+				}
+				.info {
+					flex: 1 1;
+					.flex-column;
+					padding: 0 3em;
+					@media screen and (max-width: @mobile-breakpoint) {
+						padding: 3em;
+					}
+					h3 {
+						font-size: 2em;
+						text-align: inherit;
+						margin-bottom: .5em;
+					}
+					p {
+						margin-bottom: 0;
+						margin-top: 1em;
+					}
+				}
+			}
+		}
+
+		&.what2do {
+			>.contenu {
+				.ideas {
+					display: flex;
+					flex-wrap: wrap;
+					.idea {
+						flex: 0 1 100%/3;
+						padding: 1em;
+						@media screen and (max-width: @mobile-breakpoint) {
+							flex: 0 1 100%/2;
+						}
+						@media screen and (max-width: @narrow-breakpoint) {
+							flex: 1 1 100%;
+						}
+						.pad {
+							.flex-column;
+							align-items: center;
+							.visual {
+								.proportional(720/515);
+								width: 100%;
+								background: center no-repeat;
+								background-size: cover;
+							}
+							.info {
+								.flex-column;
+								align-items: center;
+								text-align: center;
+								padding: 2em 1em;
+								h4 {
+									font-size: 1.33em;
+									margin-bottom: 1em;
+								}
+								p {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+#hotels-set {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+[data-module="destinationDetail"] h1 {
+	display: none;
+}

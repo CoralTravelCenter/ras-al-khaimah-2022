@@ -1,0 +1,274 @@
+@import "../../common/css/common";
+
+#site-wrap {
+	section {
+		&.shopping {
+			margin-top: 3%;
+			>.contenu {
+				p {
+					max-width: 50em;
+					margin: 0 auto;
+					font-size: 1.2em;
+					text-align: center;
+					font-weight: normal;
+					@media screen and (max-width: @mobile-breakpoint) {
+						padding: 0 2em;
+					}
+				}
+				.malls {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					margin-top: 2em;
+					.mall {
+						flex: 0 1 100%/3;
+						padding: 1em .5em;
+						@media screen and (max-width: @mobile-breakpoint) {
+							flex: 0 1 100%/2;
+							font-size: 2vw;
+							&:last-child:nth-child(2n+1) {
+								width: 100%;
+								flex: 1;
+							}
+						}
+						@media screen and (max-width: @narrow-breakpoint) {
+						    flex: 1 1 100%;
+							font-size: 3vw;
+						}
+						.pad {
+							.flex-column;
+							height: 100%;
+							align-items: center;
+							text-align: center;
+							background-color: white;
+							padding: 1.5em;
+							border-radius: 1em;
+							@media screen and (max-width: @mobile-breakpoint) {
+								padding: 1em;
+							}
+							.logo-mall {
+								.proportional(246/120);
+								background: center no-repeat;
+								background-size: contain;
+								width: 10em;
+								max-width: 160px;
+							}
+							p {
+								margin-top: 1.5em;
+								margin-bottom: 0;
+								font-weight: normal;
+								line-height: 1.2;
+							}
+						}
+					}
+					& + p {
+						margin-top: 2em;
+					}
+				}
+			}
+		}
+
+		&.gifts {
+			>.contenu {
+				max-width: none;
+				.visual {
+					.proportional(1728/597);
+					width: 100%;
+					background: url("../iii/visual-01-desktop.jpg") center no-repeat;
+					background-size: cover;
+					@media screen and (max-width: @mobile-breakpoint) {
+						.proportional(1/1);
+						background-image: url(../iii/visual-01-mobile.jpg);
+					}
+				}
+				.gift-ideas {
+					position: relative;
+					max-width: 1280px;
+					margin: -6em auto 0;
+					border-radius: 1.5em;
+					background-color: white;
+					padding: 2em 4em;
+					@media screen and (max-width: 1280px) {
+						max-width: 80%;
+					}
+					@media screen and (max-width: @mobile-breakpoint) {
+						margin-top: -8em;
+						padding: 2em;
+					}
+					@media screen and (max-width: @narrow-breakpoint) {
+						margin-top: -10em;
+						font-size: 3vw;
+					}
+					h3 {
+
+					}
+					.gift-list {
+						font-weight: normal;
+						margin-top: 2em;
+						column-count: 4;
+						column-gap: 2em;
+						@media screen and (max-width: @mobile-breakpoint) {
+						    column-count: 2;
+						}
+						@media screen and (max-width: @narrow-breakpoint) {
+						    column-count: 1;
+						}
+						>* {
+							display: inline-flex;
+							&:before {
+								content: "\2022";
+								margin-right: .5em;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.tours-xlinks {
+			>.contenu {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: center;
+				@media screen and (max-width: @mobile-breakpoint) {
+				    flex-direction: column;
+				}
+				.disclosable {
+					margin: 2em;
+					@media screen and (max-width: @mobile-breakpoint) {
+						margin: .5em 1em;
+					}
+					.toggler {
+						.interactive;
+						display: flex;
+						justify-content: space-between;
+						font-size: 1.2em;
+						text-align: left;
+						white-space: nowrap;
+						padding: 0;
+						cursor: pointer;
+						&:after {
+							flex-shrink: 0;
+							content: '';
+							line-height: 1;
+							height: 0.8em;
+							width: 32/18 * 0.8em;
+							background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxNiAxNkwzMSAxIiBzdHJva2U9IiM0QTRBNEEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=) center no-repeat;
+							background-size: contain;
+							margin-left: 2em;
+							.transit(transform);
+						}
+						&.open {
+							& + * {
+								max-height: 50em;
+							}
+							&:after {
+								transform: rotate(180deg);
+							}
+						}
+					}
+					.xlinks {
+						.flex-column;
+						max-height: 0;
+						.transit(max-height);
+						overflow: hidden;
+						a {
+							font-size: inherit;
+						}
+					}
+				}
+			}
+		}
+
+		&.did-you-know {
+			>.contenu {
+				.facts {
+					max-width: 1280px;
+					margin: auto;
+					padding: 0 2em;
+					column-count: 2;
+					column-gap: 4em;
+					@media screen and (max-width: @narrow-breakpoint) {
+					    column-count: 1;
+					}
+					>* {
+						display: inline-flex;
+						margin-bottom: .5em;
+						&:before {
+							content: '\2022';
+							margin-right: .5em;
+						}
+					}
+				}
+			}
+		}
+
+		&.message-us {
+			>.contenu {
+				flex-direction: row;
+				align-items: stretch;
+				@media screen and (max-width: @mobile-breakpoint) {
+					flex-direction: column;
+				}
+				.lefty, .righty {
+					flex: 1 1 50%;
+					@media screen and (max-width: @mobile-breakpoint) {
+
+					}
+				}
+				.righty {
+					.flex-column;
+					align-items: center;
+					text-align: center;
+					border-left: 1px solid black;
+					@media screen and (max-width: @mobile-breakpoint) {
+						border-left: 0;
+						border-top: 1px solid black;
+						margin-top: 2em;
+						padding-top: 2em;
+					}
+				}
+				.messengers {
+					display: flex;
+					justify-content: center;
+					margin-top: 2em;
+					a {
+						.interactive;
+						.proportional(1/1);
+						width: 5em;
+						max-width: 80px;
+						background: center no-repeat;
+						background-size: contain;
+						margin: 0 1.5em;
+					}
+				}
+
+				.phone-number {
+					font-size: 50/16em;
+					font-weight: bold;
+					color: #D8242A;
+					text-decoration: none;
+					margin: .5em auto;
+					@media screen and (max-width: @mobile-breakpoint) {
+						font-size: 8vw;
+					}
+				}
+
+			}
+		}
+
+
+	}
+}
+
+
+
+
+
+#hotels-set {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
